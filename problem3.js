@@ -1,0 +1,30 @@
+// Check integer n is power of 2
+function powersOfTwoBitWise(n) {
+  if (n < 1) {
+    return false;
+  }
+  return (n & (n - 1)) === 0;
+}
+
+function powersOfTwo(n) {
+  if (n < 1) {
+    return false;
+  }
+  while (n > 1) {
+    if (n % 2 !== 0) {
+      return false;
+    }
+    n = n / 2;
+  }
+  return true;
+}
+
+console.log(powersOfTwo(1));
+console.log(powersOfTwo(2));
+console.log(powersOfTwo(5));
+
+console.log("****************************************************");
+
+console.log(powersOfTwoBitWise(1));
+console.log(powersOfTwo(2));
+console.log(powersOfTwoBitWise(5));
